@@ -1,6 +1,7 @@
 package com.abrsm;
 
 import com.abrsm.suites.OnboardingScreenTests;
+import com.automation.AndroidNavUtils;
 import com.runner.annotations.Setup;
 import com.runner.interfaces.EnhancedTestInterface;
 import com.runner.runner.EnhancedSuite;
@@ -11,7 +12,6 @@ import org.junit.runners.Suite;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -64,6 +64,7 @@ public class AbrsmAndroidRunner implements EnhancedTestInterface {
     }
 
     public void onTestPassed(String className, String methodName) {
+        AndroidNavUtils.clickOnElement(driver, "elementId");
 
     }
 
