@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>abrsm.android</artifactId>
+    <artifactId>RAC_Consumer</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.mubaloo</groupId>
@@ -24,6 +24,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
 
 </project>
