@@ -1,6 +1,7 @@
-package com.abrsm;
+package com.NXbus;
 
-import com.abrsm.suites.OnboardingScreenTests;
+//import com.NXbus.suites.NXbusCreateAccount;
+import com.NXbus.suites.NXbus_LaunchApp;
 import com.runner.annotations.Setup;
 import com.runner.interfaces.EnhancedTestInterface;
 import com.runner.runner.EnhancedSuite;
@@ -10,21 +11,22 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterSuite;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
 @RunWith(EnhancedSuite.class)
 @Suite.SuiteClasses({
-        OnboardingScreenTests.class
+        NXbus_LaunchApp.class
 })
 @Setup(
-        application = "ABRSM Music Case (Android)",
+        application = "National Express Bus",
         reportType = Setup.ReportType.EXCEL,
         version = "1",
         attempt = 420
 )
-public class AbrsmAndroidRunner implements EnhancedTestInterface {
+public class NXBusAndroidRunner implements EnhancedTestInterface {
 
     public static AndroidDriver<MobileElement> driver;
     public static WebDriverWait wait;
@@ -42,13 +44,13 @@ public class AbrsmAndroidRunner implements EnhancedTestInterface {
 
     public void onTestStarted(String className, String methodName) throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("deviceName", "Pixel_2_XL_API_28");
+        caps.setCapability("deviceName", "Pixel_API_27");
         caps.setCapability("udid", "emulator-5554");
         caps.setCapability("platformName", "Android");
-        caps.setCapability("platformVersion", "9.0");
+        caps.setCapability("platformVersion", "8.1");
         caps.setCapability("skipUnlock", "true");
-        caps.setCapability("appPackage", "org.abrsm.music.case.qa");
-        caps.setCapability("appActivity", "com.abrsm.musiccase.ui.splash.SplashActivity");
+        caps.setCapability("appPackage", "com.nationalexpress.tickets.debug");
+        caps.setCapability("appActivity", "com.nationalexpress.tickets.ui.splash.SplashActivity");
         caps.setCapability("noReset", "false");
 
         setupDriver(caps);
@@ -63,17 +65,16 @@ public class AbrsmAndroidRunner implements EnhancedTestInterface {
     }
 
     public void onTestPassed(String className, String methodName) {
+
     }
 
     public void onTestIgnored(String className, String methodName) {
 
     }
 
-
+    @AfterSuite
     public void afterSuite() {
 
 
     }
 }
-
-

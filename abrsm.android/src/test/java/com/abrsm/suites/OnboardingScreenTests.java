@@ -1,6 +1,6 @@
 package com.abrsm.suites;
-
 import com.abrsm.AbrsmAndroidRunner;
+import com.automation.AndroidNavUtils;
 import com.runner.annotations.SuiteInformation;
 import com.runner.annotations.TestInformation;
 import org.junit.Test;
@@ -30,9 +30,11 @@ public class OnboardingScreenTests {
         AbrsmAndroidRunner.wait.until(ExpectedConditions.visibilityOfElementLocated
                 (By.id("org.abrsm.music.case.qa:id/onboarding_navigation_skip"))).click();
 
+
         //Taps the login button
         AbrsmAndroidRunner.wait.until(ExpectedConditions.visibilityOfElementLocated
                 (By.id("org.abrsm.music.case.qa:id/login_select_login"))).click();
+        AndroidNavUtils.clickOnElementByID(AbrsmAndroidRunner.driver,"");
 
 
     }

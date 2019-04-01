@@ -9,20 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>testrunner</artifactId>
-
+    <artifactId>Nxbus</artifactId>
     <dependencies>
         <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>3.13</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.ogce</groupId>
-            <artifactId>xpp3</artifactId>
-            <version>1.1.6</version>
+            <groupId>com.mubaloo</groupId>
+            <artifactId>testrunner</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
+
 
 </project>

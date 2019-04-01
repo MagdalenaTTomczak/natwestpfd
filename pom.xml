@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.inqvine</groupId>
+    <groupId>com.mubaloo</groupId>
     <artifactId>automation</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
@@ -12,7 +12,14 @@
     <modules>
         <module>testrunner</module>
         <module>abrsm.android</module>
+        <module>Nxbus</module>
+        <module>RAC_Consumer</module>
     </modules>
+
+    <properties>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
 
     <dependencies>
         <dependency>
